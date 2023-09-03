@@ -11,7 +11,7 @@
        async function sendRequest() {
          const res = await fetch('http://localhost:8080/greeting');
          const resObj = res.json();
-         await document.getElementById("greeting").innerHTML = resObj[0];
+         document.getElementById("greeting").innerHTML = resObj.toString();
        }
      </script>
    </body>
