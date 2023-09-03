@@ -9,12 +9,9 @@
 
      <script>
        async function sendRequest() {
-         fetch('http://localhost:8080/greeting')
-           .then{
-                  const resObj = res.json();
-                  document.getElementById("greeting").innerHTML = resObj["massage"];
-           }
-
+         const res = await fetch('http://localhost:8080/greeting')
+         const resObj = await res.json();
+         document.getElementById("greeting").innerHTML = resObj["massage"];
        }
      </script>
    </body>
