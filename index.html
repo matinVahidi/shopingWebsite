@@ -1,0 +1,18 @@
+  <!DOCTYPE html>
+   <html>
+   <head>
+     <title>Access Local Web Server</title>
+   </head>
+   <body>
+      <h1 id="greeting"></h1>
+     <button onclick="sendRequest()">Send Request</button>
+
+     <script>
+       async function sendRequest() {
+         const res = await fetch('http://localhost:8080/greeting');
+         console.log(res.type)
+         document.getElementById("greeting").innerHTML = res;
+       }
+     </script>
+   </body>
+   </html>
